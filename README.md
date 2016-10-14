@@ -6,7 +6,7 @@ One language from server side to client side enable code sharing and less mainta
 
 You can use this sample as a starting point to create a real time multiplayer game.
 
-It compiles in HTML5, WINDOWS
+It compiles in HTML5, Window and Android targets, and maybe more.
 
 I will try to explain the best I can some hot spots.
 
@@ -51,6 +51,27 @@ haxelib run openfl setup
   
 - If you want to create a HTML5 client get the JS client api from (http://www.smartfoxserver.com/download/sfs2x#p=client)
 and copy SFS2X_API_JS.js in client/lib/
-  
-  
+
+- finally you have to create the directory : SFS2X/extensions/HaxeExtension and copy server/toDeployInSFS2X/Haxe.zone.xml in SFS2X/zones/
+
+## Compilation
+
+ - server :
+ 
+ To have an autommatic deployment when compiling you can edit server/compileExtension.hxml to set your current SFS2X/extensions directory and working directory in this line:
+ ```sh
+ -cmd copy "G:\dev\projects\smartfox-haxe-fullstack\server\haxeextension\haxeextension-Debug.jar" "G:\dev\tools\SmartFoxServer_2X\SFS2X\extensions\HaxeExtension\"
+  ```
+ Then to compile :
+ 
+ ```sh
+ haxe compileExtension.hxml
+ ```
+ - client :
+ 
+  ```sh
+ lime test windows
+ ```
+ 
+ where the target can be windows, html5 or android.
  
