@@ -1,1 +1,56 @@
-# smartfox-haxe-fullstack
+# SmartFoxServer 2X and Haxe fullstack sample
+
+A sample project to explain how use haxe (http://haxe.org) with smarfoxserver 2X (http://www.smartfoxserver.com/) on a whole project.
+
+One language from server side to client side enable code sharing and less maintain costs.
+
+You can use this sample as a starting point to create a real time multiplayer game.
+
+It compiles in HTML5, WINDOWS
+
+I will try to explain the best I can some hot spots.
+
+Haxe is a high level modern language that enable cross platform development.
+As you maybe know to use SmartFoxserver 2X we need to create jar extensions containing our game logic using Java. Haxe provide a java target (By compiling, it generates .java file and use the java compiler to create a jar ) so will use it to replace the java language.
+
+We also use Openfl (http://www.openfl.org/) to easily create multiplateform client.
+
+##Code structure :
+
+-server
+
+-common <--- HERE IS THE UNICORN!!!
+
+-client
+
+## Installation guide
+
+- You need haxe installed on your system, check (http://haxe.org) for download and installation notes.
+
+- Then openfl, in the console type :
+```sh
+haxelib install openfl
+haxelib run openfl setup
+```
+
+- Install the smartfoxserver haxe client (https://github.com/chapatiz/smartfox-haxe-client)
+
+- Get and install SmartFoxServer 2X : (http://www.smartfoxserver.com/download/sfs2x#p=installer)
+
+- Then copy or clone this repo somewhere
+
+- Now you need to copy in server/lib some library from the SFS2X installation SmartFoxServer_2X/SFS2X/lib
+
+ 	sfs2x.jar
+  
+	sfs2x-core.jar
+  
+	slf4j-api-1.7.5.jar
+  
+	slf4j-log4j12-1.7.5.jar
+  
+- If you want to create a HTML5 client get the JS client api from (http://www.smartfoxserver.com/download/sfs2x#p=client)
+and copy SFS2X_API_JS.js in client/lib/
+  
+  
+ 
