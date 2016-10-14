@@ -20,6 +20,9 @@ class Avatar extends openfl.display.Sprite
 		var nameTF = new flash.text.TextField();
 		nameTF.text = name;
 		addChild(nameTF);
+		
+		mouseChildren = false;
+		mouseEnabled = false;
 	}
 	
 }

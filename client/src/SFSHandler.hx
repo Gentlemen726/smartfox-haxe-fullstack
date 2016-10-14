@@ -21,7 +21,7 @@ class SFSHandler
 	//public var onEnd:EndResult->Void;
 	public var currentTurn:String;
 	public var currentTurnId:Int;
-	public var me(get, null):com.smartfoxserver.v2.entities.User;
+	public var me(get, null):com.smartfoxserver.v2.entities.SFSUser;
 	public function new() 
 	{
 
@@ -184,9 +184,9 @@ class SFSHandler
 		sfs.removeEventListener(SFSEvent.CONNECTION_LOST, onConnectionLost);
 	}
 	
-	function get_me():com.smartfoxserver.v2.entities.User 
+	function get_me():com.smartfoxserver.v2.entities.SFSUser 
 	{
-		return sfs.mySelf;
+		return cast sfs.mySelf;
 	}
 	
 	
