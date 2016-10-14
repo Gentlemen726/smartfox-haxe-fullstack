@@ -75,3 +75,8 @@ and copy SFS2X_API_JS.js in client/lib/
  
  where the target can be windows, html5 or android.
  
+## Highlights
+
+TODO
+@:nativeGen
+@:meta(com.smartfoxserver.v2.annotations.MultiHandler)
