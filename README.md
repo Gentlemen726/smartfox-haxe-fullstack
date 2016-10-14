@@ -78,5 +78,7 @@ and copy SFS2X_API_JS.js in client/lib/
 ## Highlights
 
 TODO
+
 @:nativeGen
+
 @:meta(com.smartfoxserver.v2.annotations.MultiHandler)
