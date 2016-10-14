@@ -11,7 +11,7 @@ It compiles in HTML5, Window and Android targets, and maybe more.
 I will try to explain the best I can some hot spots.
 
 Haxe is a high level modern language that enable cross platform development.
-As you maybe know to use SmartFoxserver 2X we need to create jar extensions containing our game logic using Java. Haxe provide a java target (By compiling, it generates .java file and use the java compiler to create a jar ) so will use it to replace the java language.
+As you maybe know to use SmartFoxserver 2X we need to create jar extensions containing our game logic using Java. Haxe provide a java target (By compiling, it generates .java file and use the java compiler to create a jar ) so we will use it to replace the java language.
 
 We also use Openfl (http://www.openfl.org/) to easily create multiplateform client.
 
