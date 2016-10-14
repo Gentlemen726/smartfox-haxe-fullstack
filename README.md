@@ -6,7 +6,7 @@ One language from server side to client side enable code sharing and less mainta
 
 You can use this sample as a starting point to create a real time multiplayer game.
 
-It compiles in HTML5, Window and Android targets, and maybe more.
+It compiles in HTML5, Windows and Android targets, and maybe more.
 
 I will try to explain the best I can some hot spots.
 
