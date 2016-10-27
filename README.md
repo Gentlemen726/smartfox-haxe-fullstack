@@ -39,7 +39,8 @@ haxelib run openfl setup
 
 - Then copy or clone this repo somewhere
 
-- Now you need to copy in server/lib some library from the SFS2X installation SmartFoxServer_2X/SFS2X/lib
+- Now you need to copy in server/lib some library from the SFS2X installation SmartFoxServer_2X/SFS2X/lib .
+They will provide you server extension API.
 
  	sfs2x.jar
   
@@ -48,6 +49,8 @@ haxelib run openfl setup
 	slf4j-api-1.7.5.jar
   
 	slf4j-log4j12-1.7.5.jar
+	
+
   
 - If you want to create a HTML5 client get the JS client api from (http://www.smartfoxserver.com/download/sfs2x#p=client)
 and copy SFS2X_API_JS.js in client/lib/
