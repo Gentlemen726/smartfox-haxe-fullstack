@@ -32,6 +32,10 @@ We also use Openfl (http://www.openfl.org/) to easily create multiplateform clie
 haxelib install openfl
 haxelib run openfl setup
 ```
+- Get hxjava to use the java target :
+```
+haxelib install hxjava
+```
 
 - Install the smartfoxserver haxe client (https://github.com/chapatiz/smartfox-haxe-client)
 
