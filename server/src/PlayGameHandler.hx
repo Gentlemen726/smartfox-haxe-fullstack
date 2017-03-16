@@ -66,10 +66,11 @@ class PlayGameHandler extends BaseClientRequestHandler
 	
 	function makeANewRoom(user:User)
 	{
+		var stamp = Std.string(Timer.stamp());
 		var rs = new CreateRoomSettings();
 		rs.setGame(true);
 		rs.setDynamic(true);
-		rs.setName("bac_" +user.getId()+"_"+ Timer.stamp());
+		rs.setName("bac_" +user.getId()+"_"+ stamp.substr(stamp.length-3));
 		rs.setMaxUsers(2);
 		
 		var room = this.getParentExtension().getApi().createRoom(this.getParentExtension().getParentZone(), rs, user);
