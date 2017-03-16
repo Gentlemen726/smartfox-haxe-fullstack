@@ -6,12 +6,12 @@ One language from server side to client side enable code sharing and less mainta
 
 You can use this sample as a starting point to create a real time multiplayer game.
 
-It compiles in HTML5, Window and Android targets, and maybe more.
+It compiles in HTML5, Windows and Android targets, and maybe more.
 
 I will try to explain the best I can some hot spots.
 
 Haxe is a high level modern language that enable cross platform development.
-As you maybe know to use SmartFoxserver 2X we need to create jar extensions containing our game logic using Java. Haxe provide a java target (By compiling, it generates .java file and use the java compiler to create a jar ) so will use it to replace the java language.
+As you maybe know to use SmartFoxserver 2X we need to create jar extensions containing our game logic using Java. Haxe provide a java target (By compiling, it generates .java file and use the java compiler to create a jar ) so we will use it to replace the java language.
 
 We also use Openfl (http://www.openfl.org/) to easily create multiplateform client.
 
@@ -32,6 +32,10 @@ We also use Openfl (http://www.openfl.org/) to easily create multiplateform clie
 haxelib install openfl
 haxelib run openfl setup
 ```
+- Get hxjava to use the java target :
+```
+haxelib install hxjava
+```
 
 - Install the smartfoxserver haxe client (https://github.com/chapatiz/smartfox-haxe-client)
 
@@ -39,7 +43,8 @@ haxelib run openfl setup
 
 - Then copy or clone this repo somewhere
 
-- Now you need to copy in server/lib some library from the SFS2X installation SmartFoxServer_2X/SFS2X/lib
+- Now you need to copy in server/lib some library from the SFS2X installation SmartFoxServer_2X/SFS2X/lib .
+They will provide you server extension API.
 
  	sfs2x.jar
   
@@ -48,6 +53,8 @@ haxelib run openfl setup
 	slf4j-api-1.7.5.jar
   
 	slf4j-log4j12-1.7.5.jar
+	
+
   
 - If you want to create a HTML5 client get the JS client api from (http://www.smartfoxserver.com/download/sfs2x#p=client)
 and copy SFS2X_API_JS.js in client/lib/
@@ -75,3 +82,10 @@ and copy SFS2X_API_JS.js in client/lib/
  
  where the target can be windows, html5 or android.
  
+## Highlights
+
+TODO
+
+@:nativeGen
+
+@:meta(com.smartfoxserver.v2.annotations.MultiHandler)
