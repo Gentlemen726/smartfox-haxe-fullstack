@@ -17,14 +17,27 @@ class Main extends Sprite
 	var avatars:Map<Int,Avatar>;
 	var me:Avatar;
 	var sfsHandler:SFSHandler;
+	var logTextField:flash.text.TextField;
 	public function new() 
 	{
 		super();
 		avatars = new Map<Int,Avatar>();
+		
+		logTextField = new flash.text.TextField();
+		logTextField.width = Lib.current.stage.stageWidth;
+		addChild(logTextField);
+		
 		sfsHandler = new SFSHandler();
+		sfsHandler.log = log;
 		sfsHandler.onReady = onReady;
 		sfsHandler.onMove = onMove;
 		sfsHandler.connect();
+	}
+	
+	function log(value:String)
+	{
+		logTextField.appendText(value+"\n");
+		logTextField.scrollV = logTextField.maxScrollV;
 	}
 	
 	function onReady(startState:StartState)

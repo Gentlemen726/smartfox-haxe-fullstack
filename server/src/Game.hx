@@ -67,6 +67,8 @@ class Game
 
 			extension.log("sending list...");
 			extension.send(Commands.READY, obj, players);
+		}else{
+			extension.send(Commands.WAIT_OPPONENT,null, players);
 		}
 	}
 	

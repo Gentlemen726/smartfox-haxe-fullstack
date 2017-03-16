@@ -8,6 +8,8 @@ class Commands
 {
 	//user want to play
 	static public inline var PLAY:String = "play";
+	//inform user that he must wait another player
+	static public inline var WAIT_OPPONENT:String = "wait_opponent";
 	//game is created, send both user
 	static public inline var GAME:String = "game";
 	//send by client

@@ -22,6 +22,8 @@ class SFSHandler
 	public var currentTurn:String;
 	public var currentTurnId:Int;
 	public var me(get, null):com.smartfoxserver.v2.entities.SFSUser;
+	public var log:String->Void;
+	
 	public function new() 
 	{
 
@@ -30,9 +32,9 @@ class SFSHandler
 	private function onUserExit(e:SFSEvent):Void 
 	{
 		#if html5
-		trace("User disconnected :" + e.user.name);
+		log("User disconnected :" + e.user.name);
 		#else
-		trace("User disconnected :" + e.params.user.name);
+		log("User disconnected :" + e.params.user.name);
 		#end
 	}
 	
@@ -70,6 +72,9 @@ class SFSHandler
 
 				if (onReady != null)
 					onReady(startState);
+		
+			case Commands.WAIT_OPPONENT:
+				log("Game joined, waiting for opponent...");
 					
 		}
 	}
@@ -91,6 +96,7 @@ class SFSHandler
 	
 	public function play():Void
 	{
+		log("Sending request for joining a game.");
 		sfs.send(new ExtensionRequest(Commands.PLAY));
 	}
 	
@@ -135,11 +141,12 @@ class SFSHandler
 	
 	private function onConnectionLost(e:SFSEvent):Void 
 	{
-		trace("Connection lost!!!");
+		log("Connection lost!!!");
 	}
 	
 	private function onLogin(e:SFSEvent):Void 
 	{
+		log("Logged.");
 		play();
 	}
 	
@@ -151,16 +158,17 @@ class SFSHandler
 		if (e.params.success)
 		#end
 		{
+			log("Connected");
 			sfs.addEventListener(SFSEvent.LOGIN, onLogin #if html5 ,this #end);
 			sfs.send(new LoginRequest("", "", "Haxe"));
 		}else{
-			trace("Not connected to internet");
+			log("Not connected to internet");
 		}
 	}
 	
 	private function onSocketError(e:SFSEvent):Void 
 	{
-		trace("socket error:" + e.params);
+		log("socket error:" + e.params);
 	}
 	
 	public function isAvailable():Bool
