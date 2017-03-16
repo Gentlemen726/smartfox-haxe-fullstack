@@ -67,7 +67,8 @@ class SFSHandler
 					onMove(move);
 					
 			case Commands.READY :
-				//server is ready		
+				//server is ready	
+				log("Game started");
 				var startState:StartState = SFSObjectTool.sfsObjectToInstance(extParams);
 
 				if (onReady != null)
