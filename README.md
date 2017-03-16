@@ -32,6 +32,18 @@ We also use Openfl (http://www.openfl.org/) to easily create multiplateform clie
 haxelib install openfl
 haxelib run openfl setup
 ```
+---------------------------------
+WARNING CURRENTLY WORKING WITH :
+
+haxe 3.4.0
+
+lime: [2.9.1]
+
+openfl: [3.6.1]
+
+actuate: [1.8.7]
+
+---------------------------------
 - Get hxjava to use the java target :
 ```
 haxelib install hxjava
